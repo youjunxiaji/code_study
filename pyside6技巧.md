@@ -31,3 +31,19 @@ class MyListWidget(QListWidget):
 ```
 
 >三个函数缺一不可。
+
+## 将文件拖拽进QLineEdit
+
+```python
+class MyLineEdite(QLineEdit):
+
+    def dragEnterEvent(self, event: QDragEnterEvent) -> None:
+        event.accept()
+
+    def dropEvent(self, event: QDropEvent) -> None:
+        urls = event.mimeData().urls()[0]
+        self.setText(urls.toLocalFile())
+        event.accept()
+```
+
+>其中`dragEnterEvent`是必须函数。`dropEvent`可以实现更多的功能。
