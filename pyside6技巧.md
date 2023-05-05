@@ -1,11 +1,3 @@
-<!--
- * @NOTE: pyside6技巧笔记
- * @Author: gu lei
- * @Date: 2023-04-19 23:47:02
- * @LastEditTime: 2023-04-21 09:55:01
- * @LastEditors: gu lei
--->
-
 # PySide6
 
 ## 拖拽文件
@@ -50,3 +42,4 @@ class MyLineEdite(QLineEdit):
 ```
 
 > 其中 `dragEnterEvent`是必须函数。`dropEvent`可以实现更多的功能。
+
